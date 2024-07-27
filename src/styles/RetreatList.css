@@ -1,0 +1,79 @@
+.retreats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.retreat-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.retreat-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.retreat-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 5px 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.retreat-description {
+  font-size: 0.9em;
+  line-height: 1.2;
+  margin: 5px 0;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.retreat-location,
+.retreat-price,
+.retreat-date,
+.retreat-duration {
+  font-size: 0.9em;
+  margin: 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* Media Query for screens smaller than 800px */
+@media (max-width: 799px) {
+  .retreats-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media Query for screens smaller than 600px */
+@media (max-width: 599px) {
+  .retreats-container {
+      grid-template-columns: 1fr;
+  }
+}
